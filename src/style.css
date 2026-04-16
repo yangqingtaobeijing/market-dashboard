@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  /* Dark theme (default) */
+  --color-bg-primary: #0D1117;
+  --color-bg-card: #161B22;
+  --color-bg-card-hover: #1C2129;
+  --color-text-primary: #E6EDF3;
+  --color-text-secondary: #8B949E;
+  --color-text-muted: #484F58;
+  --color-border: #30363D;
+
+  /* Market colors (US style: green=up, red=down) */
+  --color-up: #00C853;
+  --color-down: #FF1744;
+  --color-flat: #8B949E;
+
+  /* Accent */
+  --color-accent: #58A6FF;
+}
+
+/* ---- Base ---- */
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+/* Tabular numbers for price display */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Light theme override ---- */
+html.light {
+  --color-bg-primary: #F6F8FA;
+  --color-bg-card: #FFFFFF;
+  --color-bg-card-hover: #F3F4F6;
+  --color-text-primary: #24292F;
+  --color-text-secondary: #57606A;
+  --color-text-muted: #8C959F;
+  --color-border: #D0D7DE;
+}
+
+/* ---- Loading pulse animation ---- */
+@keyframes card-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.card-loading {
+  animation: card-pulse 1.5s ease-in-out infinite;
+}
+
+/* ---- Transitions ---- */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
