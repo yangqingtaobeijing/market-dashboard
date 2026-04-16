@@ -53,6 +53,11 @@ async function fetchSingleIndicator(
   const meta = INDICATORS.find((i) => i.id === id)
   if (!meta) return { ...makeEmptyData(id), error: '未知指标' }
 
+  // Skip unsupported symbols on free tier
+  if (!meta.freeSupported) {
+    return { ...makeEmptyData(id), error: '请点击下方链接查看' }
+  }
+
   // Try Twelve Data first
   if (settings.twelveDataApiKey) {
     try {

@@ -100,5 +100,15 @@ const displayPercent = computed(() => formatPercent(props.data.changePercent))
     >
       {{ data.error }}
     </div>
+
+    <!-- External link -->
+    <a
+      :href="meta.externalUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mt-3 block text-xs text-[var(--color-text-muted)] hover:text-[var(--color-up)] transition-colors"
+    >
+      📊 查看实时行情 →
+    </a>
   </div>
 </template>

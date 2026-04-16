@@ -12,6 +12,10 @@ export interface IndicatorMeta {
   tdSymbol: string
   /** FRED series ID (only for US10Y fallback) */
   fredSeriesId?: string
+  /** External link to view this indicator on an official site */
+  externalUrl: string
+  /** Whether this symbol works on Twelve Data free tier */
+  freeSupported: boolean
 }
 
 /** Live data for an indicator card */
