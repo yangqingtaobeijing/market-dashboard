@@ -225,6 +225,12 @@ watch(
         class="mt-8 border-t border-[var(--color-border)] pt-4 text-center text-xs text-[var(--color-text-muted)]"
       >
         数据来源：Twelve Data · FRED &nbsp;|&nbsp; 数据仅供参考，不构成投资建议
+        <div class="mt-3 flex justify-center gap-6">
+          <a href="https://yangqingtaobeijing.github.io/us-stock-kol/" target="_blank" rel="noopener"
+            class="hover:text-[var(--color-accent)] transition">📈 美股 KOL 导航</a>
+          <a href="https://yangqingtaobeijing.github.io/us-stock-voices/" target="_blank" rel="noopener"
+            class="hover:text-[var(--color-accent)] transition">🎙️ 美股声音</a>
+        </div>
       </footer>
     </main>
 
